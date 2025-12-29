@@ -66,3 +66,67 @@ textarea::placeholder { color:#6b7280; }
 .theme-btn { position:fixed; top:20px; right:20px; z-index:20; background: rgba(255,255,255,0.1); border:none; padding:10px 14px; border-radius:50%; font-size:1.2rem; cursor:pointer; backdrop-filter:blur(5px); transition:all 0.3s;}
 .theme-btn:hover { transform:scale(1.1);}
 @keyframes moveGradient {0%{transform:translate(-25%,-25%);}50%{transform:translate(25%,25%);}100%{transform:translate(-25%,-25%);}}
+
+/* ------------------ MOBILE RESPONSIVE FIXES ------------------ */
+@media (max-width: 768px) {
+
+  /* Body adjustments */
+  body.theme-original,
+  body.theme-dark,
+  body.theme-light {
+    overflow: auto;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  /* Main container / app card */
+  .app-container {
+    width: 90%;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 1rem;
+  }
+
+  /* Title responsive */
+  .title-gradient {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  /* Paragraph / description adjust */
+  .app-container p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Tabs responsive */
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Buttons responsive */
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Textareas height adjust */
+  textarea {
+    height: 90px;
+  }
+
+  /* Output box height adjust */
+  .output-box {
+    min-height: 60px;
+  }
+
+  /* Gradient background adjustments */
+  #background .gradient {
+    filter: blur(70px);
+    width: 250%;
+    height: 250%;
+  }
+}
