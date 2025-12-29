@@ -67,25 +67,30 @@ textarea::placeholder { color:#6b7280; }
 .theme-btn:hover { transform:scale(1.1);}
 @keyframes moveGradient {0%{transform:translate(-25%,-25%);}50%{transform:translate(25%,25%);}100%{transform:translate(-25%,-25%);}}
 
-/* ------------------ MOBILE RESPONSIVE FIXES ------------------ */
+/* ------------------ MOBILE RESPONSIVE FIXES (VERTICAL CENTER) ------------------ */
 @media (max-width: 768px) {
 
-  /* Body adjustments */
+  /* Body adjustments for vertical centering */
   body.theme-original,
   body.theme-dark,
   body.theme-light {
     overflow: auto;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0;
+    background: rgba(15,23,42,0.85); /* thoda light / transparent background for mobile */
   }
 
   /* Main container / app card */
   .app-container {
     width: 90%;
     max-width: 420px;
-    margin: 20px auto;
+    margin: 0 auto; /* center horizontally */
     padding: 20px;
     border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3); /* optional for mobile pop-up effect */
   }
 
   /* Title responsive */
@@ -125,8 +130,8 @@ textarea::placeholder { color:#6b7280; }
 
   /* Gradient background adjustments */
   #background .gradient {
-    filter: blur(70px);
+    filter: blur(60px); /* thoda light blur */
     width: 250%;
     height: 250%;
   }
-}
+                 }
