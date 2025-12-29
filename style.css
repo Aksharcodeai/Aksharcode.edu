@@ -1,52 +1,31 @@
-/* ------------------ DOUBLE LINE HEADING STYLES ------------------ */
-.double-line-heading {
+
+/* ------------------ UPDATED CSS (ALL THEMES INCLUDED) ------------------ */
+
+/* Global Reset & Centering */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------ DOUBLE LINE HEADING ------------------ */
+.title-gradient {
+  font-size: 2.8rem;
+  font-weight: 800;
   text-align: center;
-  margin: 1.5rem 0;
-  position: relative;
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column; /* Isse Akshar aur Code AI upar-neeche aayenge */
+  align-items: center;
 }
 
-.double-line-heading span {
-  background-color: inherit;
-  padding: 0 15px;
-  position: relative;
-  z-index: 2;
-}
+/* ------------------ THEMES (With Transparency & Layout) ------------------ */
 
-.double-line-heading::before,
-.double-line-heading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 40%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #38bdf8, #818cf8, #c084fc, transparent);
-  z-index: 1;
-}
-
-.double-line-heading::before {
-  left: 0;
-}
-
-.double-line-heading::after {
-  right: 0;
-}
-
-/* For light theme */
-body.theme-light .double-line-heading {
-  color: #111827;
-}
-
-body.theme-light .double-line-heading::before,
-body.theme-light .double-line-heading::after {
-  background: linear-gradient(90deg, transparent, #6366f1, #818cf8, transparent);
-}
-
-/* ------------------ ORIGINAL / DARK / LIGHT THEMES ------------------ */
-
-/* Original Theme */
+/* Original Theme - Lightened for visibility */
 body.theme-original {
   font-family: 'Inter', sans-serif;
   overflow: hidden;
@@ -57,13 +36,18 @@ body.theme-original {
   justify-content: center;
   height: 100vh;
 }
-body.theme-original .glass-card { background: rgba(31,41,55,0.8); color:white; } /* Thoda transparent */
-body.theme-original .btn-primary { background: linear-gradient(90deg,#38bdf8,#818cf8); color:white; border:none;}
-body.theme-original textarea, body.theme-original .output-box { background: rgba(255,255,255,0.08); color:white; border:1px solid rgba(255,255,255,0.25); } /* Thoda transparent */
-body.theme-original .tab-btn.active { background: linear-gradient(90deg,#38bdf8,#818cf8); color:white; }
-body.theme-original #background .gradient { background: linear-gradient(120deg,#1e3a8a,#7e22ce,#0ea5e9,#1e3a8a); opacity: 0.9; } /* Thoda transparent */
+body.theme-original .glass-card { 
+  background: rgba(31, 41, 55, 0.45); /* Transparent card background */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white; 
+}
+body.theme-original .btn-primary { 
+  background: rgba(56, 189, 248, 0.1); 
+  color: white; 
+  border: 1px solid #38bdf8;
+}
 
-/* Dark Theme */
+/* Dark Theme - High Transparency */
 body.theme-dark {
   font-family: 'Inter', sans-serif;
   overflow: hidden;
@@ -74,13 +58,18 @@ body.theme-dark {
   justify-content: center;
   height: 100vh;
 }
-body.theme-dark .glass-card { background: rgba(31,41,55,0.8); color:white; } /* Thoda transparent */
-body.theme-dark .btn-primary { background: rgba(255,255,255,0.1); color:white; border:1px solid rgba(255,255,255,0.25);} /* Thoda transparent */
-body.theme-dark textarea, body.theme-dark .output-box { background: rgba(255,255,255,0.08); color:white; border:1px solid rgba(255,255,255,0.25); } /* Thoda transparent */
-body.theme-dark .tab-btn.active { background: linear-gradient(90deg,#38bdf8,#818cf8); color:white; }
-body.theme-dark #background .gradient { background: linear-gradient(120deg,#1e3a8a,#0ea5e9,#8b5cf6,#f9a8d4,#ef4444,#f97316,#1e3a8a); opacity: 0.85; } /* Thoda transparent */
+body.theme-dark .glass-card { 
+  background: rgba(15, 23, 42, 0.5); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white; 
+}
+body.theme-dark .btn-primary { 
+  background: rgba(255, 255, 255, 0.05); 
+  color: white; 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-/* Light Theme */
+/* Light Theme - Clean Glass Look */
 body.theme-light {
   font-family: 'Inter', sans-serif;
   overflow: hidden;
@@ -91,160 +80,68 @@ body.theme-light {
   justify-content: center;
   height: 100vh;
 }
-body.theme-light .glass-card { background: rgba(255,255,255,0.85); color:#111827; } /* Thoda transparent */
-body.theme-light .btn-primary { background: rgba(0,0,0,0.07); color:#111827; border:1px solid rgba(0,0,0,0.25);} /* Thoda transparent */
-body.theme-light textarea, body.theme-light .output-box { background: rgba(0,0,0,0.07); color:#111827; border:1px solid rgba(0,0,0,0.25); } /* Thoda transparent */
-body.theme-light .tab-btn.active { background: linear-gradient(90deg,#6366f1,#818cf8); color:#fff; }
-body.theme-light #background .gradient { background: linear-gradient(120deg,#e0f2fe,#bae6fd,#7dd3fc,#38bdf8,#0ea5e9,#38bdf8,#e0f2fe); opacity: 0.8; } /* Thoda transparent */
+body.theme-light .glass-card { 
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent light card */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #111827; 
+}
+body.theme-light .btn-primary { 
+  background: rgba(0, 0, 0, 0.05); 
+  color: #111827; 
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* ------------------ COMMON STYLING ------------------ */
-.glass-card { backdrop-filter: blur(12px); border-radius:1rem; max-width:600px; width:90%; z-index:10; padding:1.5rem; border: 1px solid rgba(255,255,255,0.15);} /* Thoda blur increase */
-.btn-primary { padding:10px 18px; font-weight:bold; border-radius:10px; transition:0.3s; }
-.btn-primary:hover { transform:scale(1.03); box-shadow:0 0 15px rgba(0,0,0,0.3); }
-.tab-btn { border-radius:10px; padding:10px 16px; transition:0.3s; background: rgba(255,255,255,0.05);} /* Thoda transparent */
-textarea { width:100%; height:100px; border-radius:10px; padding:10px; outline:none; resize:none; font-size: 0.95rem; }
-textarea::placeholder { color:#6b7280; }
-.output-box { min-height:80px; border-radius:10px; padding:10px; white-space:pre-wrap; word-wrap:break-word; font-size: 0.95rem;}
-#background { position:absolute; inset:0; overflow:hidden; z-index:0; }
-.gradient { position:absolute; width:200%; height:200%; background-size:500% 500%; animation: moveGradient 18s linear infinite; filter:blur(80px);} /* Blur thoda kam */
-#particles { position:absolute; inset:0; z-index:0;}
-.theme-btn { position:fixed; top:20px; right:20px; z-index:20; background: rgba(255,255,255,0.15); border:none; padding:10px 14px; border-radius:50%; font-size:1.2rem; cursor:pointer; backdrop-filter:blur(8px); transition:all 0.3s; border: 1px solid rgba(255,255,255,0.2);} /* Thoda transparent */
-.theme-btn:hover { transform:scale(1.1); background: rgba(255,255,255,0.2);}
-@keyframes moveGradient {0%{transform:translate(-25%,-25%);}50%{transform:translate(25%,25%);}100%{transform:translate(-25%,-25%);}}
-
-/* Tab buttons ko bhi thoda transparent */
-.tab-btn:not(.active) {
-  background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.8);
-  border: 1px solid rgba(255,255,255,0.1);
+.glass-card { 
+  backdrop-filter: blur(12px); /* Background particles ko dhundla aur cool banata hai */
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem; 
+  max-width: 500px; 
+  width: 92%; 
+  z-index: 10; 
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-body.theme-light .tab-btn:not(.active) {
-  background: rgba(0,0,0,0.05);
-  color: rgba(17,24,39,0.8);
-  border: 1px solid rgba(0,0,0,0.1);
+.btn-primary { 
+  padding: 12px 20px; 
+  font-weight: bold; 
+  border-radius: 12px; 
+  transition: 0.3s; 
+  cursor: pointer;
 }
 
-/* ------------------ MOBILE RESPONSIVE FIXES ------------------ */
-@media (max-width: 768px) {
+.tab-btn { border-radius:10px; padding:10px 16px; transition:0.3s; }
+.tab-btn.active { background: linear-gradient(90deg,#38bdf8,#818cf8); color:white; }
 
-  /* Body adjustments - centered and compact */
-  body.theme-original,
-  body.theme-dark,
-  body.theme-light {
-    overflow: auto;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-  }
+textarea, .output-box { 
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05) !important; 
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: inherit;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  resize: none;
+}
 
-  /* Glass card adjustments - smaller and centered */
-  .glass-card {
-    width: 95%;
-    max-width: 380px;
-    padding: 1.2rem;
-    margin: 20px auto;
-    transform: translateY(-5%);
-    backdrop-filter: blur(10px); /* Mobile pe thoda kam blur */
-  }
+.output-box { min-height: 80px; white-space: pre-wrap; word-wrap: break-word; }
 
-  /* Title responsive - smaller but still prominent */
+#background { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+#background .gradient { width: 100%; height: 100%; }
+
+/* ------------------ MOBILE RESPONSIVE FIX ------------------ */
+@media (max-width: 480px) {
   .title-gradient {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
+    font-size: 2rem; /* Mobile par heading choti ho jayegi */
+    margin-bottom: 1rem;
   }
-
-  /* Double line heading responsive */
-  .double-line-heading {
-    font-size: 1.5rem;
-    margin: 1rem 0;
+  .glass-card {
+    padding: 1.5rem;
+    width: 95%; /* Mobile screen par zyada space lega */
   }
-  
-  .double-line-heading::before,
-  .double-line-heading::after {
-    width: 35%;
-  }
-
-  /* Paragraph / description adjust */
-  .app-container p,
-  .glass-card p {
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-    text-align: center;
-  }
-
-  /* Tabs responsive - compact */
-  .tab-btn {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    margin: 2px;
-  }
-
-  /* Buttons responsive - slightly smaller */
   .btn-primary {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-    margin: 4px 0;
-  }
-
-  /* Textareas height adjust - shorter */
-  textarea {
-    height: 80px;
+    padding: 10px 15px;
     font-size: 0.9rem;
-    padding: 8px;
   }
-
-  /* Output box height adjust - shorter */
-  .output-box {
-    min-height: 70px;
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  /* Gradient background adjustments - ensure visibility */
-  #background {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-  }
-  
-  #background .gradient {
-    filter: blur(50px); /* Mobile pe aur kam blur */
-    width: 300%;
-    height: 300%;
-    animation: moveGradient 15s linear infinite;
-    opacity: 0.9; /* Mobile pe thoda zyada visible */
-  }
-
-  /* Theme button adjustments */
-  .theme-btn {
-    top: 15px;
-    right: 15px;
-    padding: 8px 12px;
-    font-size: 1rem;
-    backdrop-filter: blur(6px);
-  }
-
-  /* Form elements spacing */
-  .form-group {
-    margin-bottom: 0.8rem;
-  }
-
-  /* Button container adjustments */
-  .btn-group,
-  .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 0.8rem;
-  }
-
-  /* Ensure all content fits without horizontal scroll */
-  * {
-    box-sizing: border-box;
-  }
-  }
+}
