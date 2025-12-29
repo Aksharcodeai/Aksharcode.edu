@@ -1,4 +1,50 @@
 
+/* ------------------ DOUBLE LINE HEADING STYLES ------------------ */
+.double-line-heading {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.double-line-heading span {
+  background-color: inherit;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.double-line-heading::before,
+.double-line-heading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #818cf8, #c084fc, transparent);
+  z-index: 1;
+}
+
+.double-line-heading::before {
+  left: 0;
+}
+
+.double-line-heading::after {
+  right: 0;
+}
+
+/* For light theme */
+body.theme-light .double-line-heading {
+  color: #111827;
+}
+
+body.theme-light .double-line-heading::before,
+body.theme-light .double-line-heading::after {
+  background: linear-gradient(90deg, transparent, #6366f1, #818cf8, transparent);
+}
+
 /* ------------------ ORIGINAL / DARK / LIGHT THEMES ------------------ */
 
 /* Original Theme */
@@ -100,6 +146,17 @@ textarea::placeholder { color:#6b7280; }
     margin-bottom: 0.8rem;
   }
 
+  /* Double line heading responsive */
+  .double-line-heading {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .double-line-heading::before,
+  .double-line-heading::after {
+    width: 35%;
+  }
+
   /* Paragraph / description adjust */
   .app-container p,
   .glass-card p {
@@ -176,4 +233,4 @@ textarea::placeholder { color:#6b7280; }
   * {
     box-sizing: border-box;
   }
-          }
+}
